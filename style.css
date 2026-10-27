@@ -1,0 +1,373 @@
+body, html{
+    margin: 0;
+    height: 100%;
+}
+
+body{
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+body.aboutbody{
+    background: url('https://www.mozaweb.hu/en/mozaikVideo/CLIP/nature/mezo_clip/mezo_clip_pre.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbar{
+    background: rgba(221, 221, 221, 0.6);
+    padding: 15px;
+    text-align: center;
+    top: 0;
+}
+.navbar a{
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    margin: 0 7px;
+}
+
+.navbar a:hover{
+    background-color: rgba(51, 51, 51, 0.9);
+    color: white;
+    border-radius: 10px;
+}
+
+.navbar a.active {
+    background-color: black;
+    color: White;
+    border-radius: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 47.7px);
+    margin: 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 50px;
+    flex-direction: row;
+    transition: all 0.3s ease;
+}
+
+.buttons a::before{
+    content: attr(data-social);
+    position: absolute;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transform: translateY(-50px) rotate(25deg);
+    opacity: 0;
+    transition: 300ms cubic-bezier(.42,0,.44,1.68);
+}
+
+.buttons a::after{
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid var(--accent-color);
+    transform: translateY(0) rotate(25deg);
+    opacity: 0;
+    transition: 300ms cubic-bezier(.42,0,.44,1.68);
+}
+
+.buttons a:hover::before{
+    transform: translateY(-120px) rotate(0);
+    opacity: 1;
+}
+
+.buttons a:hover::after{
+    transform: translateY(-73px);
+    opacity: 1;
+}
+
+.buttons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 40px;
+    transition: all 0.3s ease;
+}
+
+.email{
+    color: rgb(241, 157, 54)
+}
+
+.email:hover{
+    color: white;
+    background-color:  rgba(241, 157, 54, 0.3);
+}
+
+.discord{
+    color: rgb(49, 61, 197);
+}
+
+.discord:hover{
+    color: white;
+    background-color: rgba(49, 61, 197, 0.35);
+}
+
+.c-facebook{
+    color: rgb(18, 153, 246);
+    background-color: rgb(33, 32, 32);
+}
+
+.c-facebook:hover{
+    background-color: rgba(18, 153, 246, 0.4);
+    color: white;
+    transform: scale(1.1)
+}
+
+.facebook{
+    color: rgb(18, 153, 246);
+    background-color: rgb(33, 32, 32);
+}
+
+.facebook:hover{
+    background-color: rgb(18, 153, 246);
+    color: white;
+    transform: scale(1.1)
+}
+
+.twitter{
+    color: rgb(0, 172, 237);
+    background-color: rgb(33, 32, 32);
+}
+
+.twitter:hover{
+    background-color: rgb(0, 172, 237);
+    color: white;
+    transform: scale(1.1)
+}
+
+.instagram{
+    color: rgb(193, 53, 132);
+    background-color: rgb(33, 32, 32);
+}
+
+.instagram:hover{
+    background-color: rgb(193, 53, 132);
+    color: white;
+    transform: scale(1.1)
+}
+
+.tiktok{
+    color: rgb(91, 82, 82);
+    background-color: rgb(33, 32, 32);
+}
+
+.tiktok:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    transform: scale(1.1)
+}
+
+.forms{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+input{
+    height: calc(30% - 16px);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0 0 6px;
+}
+
+button{
+    margin-top: 10px;
+    width: 70px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.field {
+    position: relative;
+    margin: 10px 0;
+}
+
+.field input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 56px;
+    padding: 20px 16px 8px;
+    margin-bottom: 10px;
+}
+
+.field label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.2s ease;
+    pointer-events: none;
+}
+
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label {
+    top: 8px;
+    transform: none;
+    font-size: 12px;
+}
+
+.forms img{
+    border-radius: 52%;
+}
+
+.contentcontainer{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 20px;
+}
+
+.content{
+    justify-content: center;
+    width: 400px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+.content h1{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.content li{
+    margin-bottom: 4%;
+    margin-left: 15%;
+    font-size: 1.3rem;
+}
+
+.content img{
+    margin-left: 5px;
+    width: 390px;
+}
+
+.contactinfos img{
+    height: 40px;
+    width: 40px;
+    margin-left: -10px;
+    margin-right: 15px;
+}
+
+.contactinfos > div {
+    margin-bottom: 25px;
+    margin-left: 40px;
+    margin-right: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+}
+
+.contactinfos a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    margin-left: 0px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: inherit;
+}
+
+.contactinfos > div{
+    transition: all 400ms ease;
+}
+.contactinfos > div:hover{
+    transform: scale(1.1)
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: inherit;
+    margin-top: -48px;
+}
+
+.forms{
+    display: flex;
+    background-color: #333;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+#loginbutton {
+    margin-top: 10px;
+    width: 120px;
+    height: 45px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.15s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), 
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+#loginbutton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+#loginbutton:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3), 
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
