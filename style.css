@@ -205,11 +205,12 @@ button{
 .field {
     position: relative;
     margin: 10px 0;
+    margin-left: -40px;
 }
 
 .field input {
     box-sizing: border-box;
-    width: 100%;
+    width: 120%;
     height: 56px;
     padding: 20px 16px 8px;
     margin-bottom: 10px;
@@ -235,7 +236,7 @@ button{
     border-radius: 52%;
 }
 
-.contentcontainer{
+.contentcontainer {
     display: flex;
     justify-content: center;
     margin: 10px;
@@ -276,7 +277,7 @@ button{
     margin-right: 15px;
 }
 
-.contactinfos > div {
+.contactinfos > div{
     margin-bottom: 25px;
     margin-left: 40px;
     margin-right: 40px;
@@ -286,9 +287,10 @@ button{
     -webkit-backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, 0.3);
     overflow: hidden;
+    transition: all 400ms ease;
 }
 
-.contactinfos a {
+.contactinfos a{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -301,9 +303,6 @@ button{
     color: inherit;
 }
 
-.contactinfos > div{
-    transition: all 400ms ease;
-}
 .contactinfos > div:hover{
     transform: scale(1.1)
 }
@@ -326,7 +325,7 @@ button{
     background-color: #333;
     justify-content: center;
     align-items: center;
-    padding: 35px;
+    padding: 60px;
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 16px;
@@ -335,7 +334,7 @@ button{
     border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-#loginbutton {
+#loginbutton{
     margin-top: 10px;
     width: 120px;
     height: 45px;
@@ -353,13 +352,13 @@ button{
     inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
-#loginbutton:hover {
+#loginbutton:hover{
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 
     inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
-#loginbutton:active {
+#loginbutton:active{
     transform: translateY(2px);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3), 
     inset 0 2px 4px rgba(0, 0, 0, 0.2);
